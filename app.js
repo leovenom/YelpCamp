@@ -20,17 +20,21 @@ const app = express();
 
 
 app.set('view engine', 'ejs')
-app.set('views', path.join(__dirname, 'views'))
+app.set('views', path.join(__dirname, 'views'))  
 
 app.get('/', (req,res) => {
   res.render('home')
 })
 
-app.get('/makecampground', async (req, res) => {
-  const camp = new Campground({ title: 'My Backyard', description: 'cheap camp'});
-  await camp.save();
-  res.send(camp)
+app.get('/campgrounds', async (req, res) => {
+  const campgrounds = await Campground.find({});
+  res.render('campgrounds/index', { campgrounds })
 })
+
+app.get('/campgrounds/:id', async (req, res) => {
+  res.render('campgrounds/show')
+})
+
 
 app.listen(3000, () => {
   console.log('Serving on portal 3000')
