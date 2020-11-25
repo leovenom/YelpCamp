@@ -9,9 +9,11 @@
 <body class="d-flex flex-column vh-100">
     <%- include('../partials/navbar')%>
   <main class="container mt-5">
+    <%= success %>
     <%- body%>
   </main>
   <%- include('../partials/footer')%>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-popRpmFF9JQgExhfw5tZT4I9/CI5e2QcuUZPOVXb1m7qUmeR2b50u+YFEYe1wgzy" crossorigin="anonymous"></script>
+  <script src="/javascripts/validateForms.js"></script>
 </body>
 </html>
