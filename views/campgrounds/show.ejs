@@ -1,6 +1,6 @@
 <% layout('layouts/boilerplate')%>
 <div class="row">
-  <div class="col-6 offset-3" style="width: 18rem;">
+  <div class="col-6">
     <div class="card mb-3">
       <img src="<%= campground.image %>" class="card-img-top" alt="...">
       <div class="card-body">
@@ -21,6 +21,8 @@
         2 days ago <a href="/campgrounds">All Campgrounds</a>
       </div>
     </div>
+  </div>
+  <div class="col-6">
     <h2>Leave a review</h2>
       <form action="/campgrounds/<%= campground._id %>/reviews" method="POST" class="mb-3 validaded-form" novalidate>
         <div class="mb-3">
@@ -36,9 +38,19 @@
         </div>
        <button class="btn btn-success">Submit</button>
       </form>
+      <% for(let review of campground.reviews) { %>
+      <div class="card mb-3 ">
+        <div class="card-body">
+          <h5 class="card-title">Rating: <%= review.rating %></h5>
+          <p class="card-text">Review: <%= review.body %></p>
+          <form action="/campgrounds/<%=campground._id%>/reviews/<%=review._id%>?_method=DELETE" method="POST">
+            <button class="btn btn-sm btn-danger">Delete</button>
+          </form>
+        </div>
+      </div>
+      <% } %>
   </div>
 </div>
-
 <script>
   // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
