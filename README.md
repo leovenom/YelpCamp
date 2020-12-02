@@ -1,5 +1,10 @@
-# YelpCamp
+# 🏕 YelpCamp
 
+<a href="https://my-campground.herokuapp.com/">
+ <p align="center">
+  <img src="https://i.imgur.com/F6IiDsR.png?w="350" alt="Campground"
+ </p>
+</a>
 
 YelpCamp is a website where users can create and review campgrounds. In order to review or create a campground, you must have an account. This project was part of Colt Steele's web dev course on udemy.  
 
