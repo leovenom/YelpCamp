@@ -1,6 +1,7 @@
 <% layout('layouts/boilerplate')%>
 <link rel="stylesheet" href="/stylesheets/stars.css">
 
+<div class="container mt-5 mb-3">
 <div class="row">
   <div class="col-6">
     <div id="campgroundCarousel" class="carousel slide" data-ride="carousel">
@@ -99,6 +100,7 @@
       </div>
       <% } %>
   </div>
+</div>
 </div>
 <script>
   const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
