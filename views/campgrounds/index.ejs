@@ -21,8 +21,6 @@
 
   </nav> -->
 
-
-
   <div class="row">
     <% for (let campground of campgrounds){%>
     <div class="col-sm-12 col-md-6 col-lg-4">
@@ -43,7 +41,7 @@
               <p class="card-text">
                   <small class="text-muted"><%= campground.location%></small>
               </p>
-              <a class="btn btn-primary" href="/campgrounds/<%=campground._id%>">View <%=campground.title%></a>
+              <a class="btn btn-success" href="/campgrounds/<%=campground._id%>">View <%=campground.title%></a>
           </div>
       </div>
     </div>
