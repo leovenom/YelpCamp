@@ -23,6 +23,7 @@
     "express-mongo-sanitize": "^2.0.0",
     "express-session": "^1.17.1",
     "helmet": "^7.0.0",
+    "html-escape": "^2.0.0",
     "htmlparser2": "^9.0.0",
     "joi": "^17.9.2",
     "method-override": "^3.0.0",
