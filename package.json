@@ -35,7 +35,8 @@
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^8.0.0",
     "postcss-modules": "^6.0.0",
-    "sanitize-html": "^2.10.0"
+    "sanitize-html": "^2.10.0",
+    "vercel": "^30.1.2"
   },
   "devDependencies": {
     "locus": "^2.0.4"
