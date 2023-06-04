@@ -144,6 +144,8 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
+app.get("/favicon.ico", (req, res) => res.status(204));
+
 app.all("*", (req, res, next) => {
   next(new ExpressError("Page Not Found", 404));
 });
