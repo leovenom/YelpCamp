@@ -1,5 +1,7 @@
 const BaseJoi = require("joi");
-const sanitizeHtml = require("sanitize-html");
+const sanitizeHtml(input) {
+  return input.replace(/(<([^>]+)>)/gi, "");
+}
 
 const extension = (joi) => ({
   type: "string",
