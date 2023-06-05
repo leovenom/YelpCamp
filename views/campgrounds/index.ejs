@@ -26,12 +26,12 @@
     <div class="col-sm-12 col-md-6 col-lg-4">
       <div class="card indexCards shadow border-0 mt-4">
         <%if(campground.images.length) {%>
-        <a href="/campgrounds/<%= campground._id %>"><img class="card-img-top" src="<%=campground.images[0].url%>" style="
+        <a href="/campgrounds/<%= campground._id %>"><img class="card-img-top" crossorigin="anonymous" src="<%=campground.images[0].url%>" style="
           height: 40vh;
           object-fit: cover;
       "></a>
         <% }else {%>
-          <img class="img-fluid" alt=""
+          <img class="img-fluid" alt="" crossorigin="anonymous"
               src="https://res.cloudinary.com/douqbebwk/image/upload/v1600103881/YelpCamp/lz8jjv2gyynjil7lswf4.png">
           <% } %>
   
